@@ -1,0 +1,141 @@
+<!-- <section class="property-binding">
+
+    <article>
+        <h3>Class and Style Binding</h3>
+        <div>
+            Select a class:
+            <select class="btn btn-primary dropdown-toggle" #class (change)="0">
+                <option value="alert-primary">Primary</option>
+                <option value="alert-secondary">Secondary</option>
+                <option value="alert-success">Success</option>
+                <option value="alert-danger">Danger</option>
+                <option value="alert-warning">Warning</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-light">Light</option>
+                <option value="alert-dark">Dark</option>
+            </select>
+            <br><br>
+
+            <div class="alert {{ class.value }}" role="alert">
+                Text colored according dropdown value.
+            </div>
+
+            <div class="alert alert-danger" role="alert"
+            [style.display]="class.value == 'alert-danger' ? 'block' : 'none'">
+                A simple dark alert—check it out!
+            </div>
+
+            <div class="alert" role="alert"
+            [class.alert-primary]="class.value == 'alert-primary'">
+                A simple primary alert—check it out!
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-secondary]="class.value == 'alert-secondary'">
+                A simple secondary alert—check it out!
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-success]="class.value == 'alert-success'">
+                A simple success alert—check it out!
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-danger]="class.value == 'alert-danger'">
+                A simple danger alert—check it out!
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-warning]="class.value == 'alert-warning'">
+                A simple warning alert—check it out!
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-info]="class.value == 'alert-info'">
+                A simple info alert—check it out!
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-light]="class.value == 'alert-light'">
+                A simple light alert—check it out!
+            </div>
+            <div class="alert" role="alert"
+            [class.alert-dark]="class.value == 'alert-dark'">
+                A simple dark alert—check it out!
+            </div>
+
+        </div>
+    </article>
+
+</section> -->
+
+<!-- <section class="event-binding container">
+    <article>
+        <h3>Event binding</h3>
+        <div>
+            <button (click)="clickedButton()"
+            class="btn btn-primary">Click me!</button>
+        </div>
+
+        <br><br>
+
+        <input type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="saveValue(inputField)"
+        (blur)="saveValue(inputField)"
+        #inputField />
+
+        <p>Actual value: {{ actualValue }}</p>
+        <p>Salved value: {{ savedValue }}</p>
+
+        <span 
+        (mouseover)="onMouseOverAndOut()"
+        (mouseout)="onMouseOverAndOut()"
+        [class.highlight]="isMouseOver"
+        >
+            Pass the pointer over me
+        </span>
+    </article>
+</section> -->
+
+<!-- <section class="two-way-binding">
+    <article style="margin-left: 20px; margin-top: 20px;">
+        <h3>Two-way data binding</h3>
+        <div>
+
+            <input type="text"
+                [value]="name"
+                (input)="name = $event.target.value"
+            />
+
+            <input type="text"
+                [(ngModel)]="name"
+                (ngModelChange)="name = $event"
+            />
+
+            <input type="text" [(ngModel)]="name">
+
+            <br><br>
+            <p>You typed: {{ name }}</p>
+        </div>
+
+        <div>
+            <p>My name is {{ person.name }} and I am {{ person.age }} years old.</p>
+            <input type="text" [(ngModel)]="person.name">
+            <br><br>
+            <input type="text" [(ngModel)]="person.age">
+        </div>
+    </article>
+</section> -->
+
+<section class="input-output-properties">
+
+    <article>
+        <h3>Input/Output properties</h3>
+
+        <p>{{ movieName }}</p>
+
+        <app-course [name]="courseName"></app-course>
+        <br>
+        <app-input-practice [movie]="movieName"></app-input-practice>
+
+        <counter [value]="initialValue"
+        (valueChanged)="onValueChanged($event)"
+        ></counter>
+    </article>
+</section>
+

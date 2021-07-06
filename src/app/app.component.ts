@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'data-binding';
+  value: number = 50;
+
+  deleteCycle: boolean = false;
+
+  changeValue() {
+    this.value++;
+  }
+
+  destroyCycle() {
+    this.deleteCycle = true;
+  }
 }
